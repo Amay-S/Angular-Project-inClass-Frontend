@@ -1,0 +1,183 @@
+Date:14/June/2023
+
+-----------------
+
+Angular HttpClient Module
+
+-------------------------
+
+HttpClient module of Angular is used to invoke the services which are running
+
+on the server side like Java, .NET, PHP etc
+
+
+
+	Ex:
+
+		httpClient : HttpClient;
+
+		httpClient.get("http://localhost:8080/api/employees/allemployees");
+
+
+
+Java Side
+
+----------
+
+- Create a table "Employee" in MySQL
+
+	mysql>create table employee (emp_id varchar(10), name varchar(10), designation varchar(10), salary int(4));
+
+	mysql>insert into employee values ('111','Raj','accountant',6000);
+
+   	mysql>insert into employee values ('222','Ramu','hr',8000);
+
+   	mysql>insert into employee values ('333','Ramya','manager',16000);
+
+
+
+- Choose a new workspace "SpringAngular" in STS
+
+
+
+- Create a Spring Starter Project "SpringAngularProj" in STS
+
+
+
+	Click on File -> New -> Spring Starter Project
+
+
+
+	Name : SpringAngularProj
+
+	Type: Maven Project
+
+	Java Version : 8
+
+	Group : springangular
+
+	Artifact : SpringAngularProj
+
+	Package : com.spring.angular
+
+
+
+	Click Next
+
+
+
+	In Project Dependencies add the following and click Finish
+
+			- Spring Web
+
+			- Lombok
+
+			- Spring Data JPA
+
+			- MySQL Driver
+
+
+
+- Create a POJO Class "Employee" in com.spring.angular package
+
+		Refer program Employee.java
+
+
+
+- Create an interface "EmployeeDAO" in com.spring.angular package
+
+		REfer program EmployeeDAO.java
+
+
+
+- Create  a Service class "EmployeeService" in com.spring.angular package
+
+		REfer program EmployeeService.java
+
+
+
+- Create a REST Controller class "EmployeeController" in com.spring.angular package
+
+		Refer program EmployeeController.java
+
+
+
+- Update application.properties
+
+	REfer program application.properties
+
+
+
+- Run "SpringAngularProj" as Spring Boot App
+
+
+
+		Refer programs in SpringAngularProj.zip file
+
+
+
+Angular Side
+
+------------
+
+- Create a new component "employee"
+
+	>ng g c employee
+
+
+
+		REfer programs
+
+			- employee.component.html
+
+			- employee.component.ts
+
+
+
+- Update app.module.ts file by adding "HttpClientModule"
+
+	Refer program app.module.ts 
+
+
+
+- Create a folder "service" in app folder
+
+
+
+- Create a file "http-client.service.ts" in service folder
+
+		Refer program http-client.service.ts
+
+
+
+- Update "app-routing.module.ts" file 
+
+		Refer program app-routing.module.ts
+
+
+
+- Run the project
+
+	>ng serve
+
+
+
+- Open browser and type the following url
+
+	http://localhost:4200
+
+
+
+		Refer programs of Angular in app.zip file
+
+
+
+
+
+- Full Stack Java Course Recordings, documents, programs in the form of zip file
+
+- GitHub tool recording
+
+- Java Related Links
+
+- Mini Project (SpringBoot Angular CRUD Application)
