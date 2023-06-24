@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routerConfig';
+import { EmployeeComponent } from './employee/employee.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { appRoutes } from './routerConfig';
     BookComponent,
     HomeComponent,
     AboutComponent,
-    DashboardComponent
+    DashboardComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
